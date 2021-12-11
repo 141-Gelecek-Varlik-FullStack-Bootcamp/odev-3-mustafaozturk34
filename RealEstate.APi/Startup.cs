@@ -1,3 +1,5 @@
+using AutoMapper;
+using Groot.Service.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RealEstate.APi.Infrastructer;
+using RealEstate.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +30,13 @@ namespace RealEstate.APi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var _mappingProfile = new MapperConfiguration(mp => { mp.AddProfile(new MappingProfile()); });
+            IMapper mapper = _mappingProfile.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddSingleton<IRealEstateOwnerService, RealEstateOwnerService>();
+            services.AddSingleton<IRealEstateService, RealEstateService>();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
