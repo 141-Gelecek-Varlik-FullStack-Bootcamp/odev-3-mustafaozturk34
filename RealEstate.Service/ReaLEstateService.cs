@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Service
 {
+    //real estate transactions
     public class RealEstateService : IRealEstateService
     {
         private readonly IMapper mapper;
@@ -21,7 +22,7 @@ namespace RealEstate.Service
         }
 
 
-
+        //create method for real estate
         public General<RealEstateViewModel> Insert(RealEstateViewModel newRealEstate)
         {
             var result = new General<RealEstateViewModel>();
@@ -46,7 +47,22 @@ namespace RealEstate.Service
             return result;
         }
 
+        //list method for real estate
+        public List<RealEstate.DB.Entities.RealEstate> GetEstate()
+        {
+            using (var context = new RealEstateContext())
+            {
+                var data = context.RealEstate
+                    .Where(x => x.Iuser == 1)
+                    .OrderBy(x => x.Id).ToList();
 
+                return data;
+            }
+
+
+        }
+
+        //full list method for real estate
         public General<RealEstateViewModel> GetRealEstate()
         {
             var result = new General<RealEstateViewModel>();
@@ -69,6 +85,7 @@ namespace RealEstate.Service
             return result;
         }
 
+        //update method for real estate
         public General<RealEstateViewModel> Update(int id, RealEstateViewModel realEstate)
         {
             var result = new General<RealEstateViewModel>();
@@ -99,7 +116,7 @@ namespace RealEstate.Service
             return result;
         }
 
-
+        ////delete method for real estate
         public General<RealEstateViewModel> Delete(int id)
         {
             var result = new General<RealEstateViewModel>();

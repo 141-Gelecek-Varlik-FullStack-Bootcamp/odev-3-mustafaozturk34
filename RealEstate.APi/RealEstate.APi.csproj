@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RealEstate.DB\RealEstate.DB.csproj" />
+    <ProjectReference Include="..\ReaLEstate.Extension\ReaLEstate.Extension.csproj" />
     <ProjectReference Include="..\RealEstate.Model\RealEstate.Model.csproj" />
     <ProjectReference Include="..\RealEstate.Service\RealEstate.Service.csproj" />
   </ItemGroup>

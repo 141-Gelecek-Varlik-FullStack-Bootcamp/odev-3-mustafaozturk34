@@ -1576,6 +1576,16 @@
           "bin/placeholder/RealEstate.DB.dll": {}
         }
       },
+      "ReaLEstate.Extension/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ReaLEstate.Extension.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ReaLEstate.Extension.dll": {}
+        }
+      },
       "RealEstate.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5960,6 +5970,11 @@
       "path": "../RealEstate.DB/RealEstate.DB.csproj",
       "msbuildProject": "../RealEstate.DB/RealEstate.DB.csproj"
     },
+    "ReaLEstate.Extension/1.0.0": {
+      "type": "project",
+      "path": "../ReaLEstate.Extension/ReaLEstate.Extension.csproj",
+      "msbuildProject": "../ReaLEstate.Extension/ReaLEstate.Extension.csproj"
+    },
     "RealEstate.Model/1.0.0": {
       "type": "project",
       "path": "../RealEstate.Model/RealEstate.Model.csproj",
@@ -5974,6 +5989,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper >= 10.1.1",
+      "ReaLEstate.Extension >= 1.0.0",
       "RealEstate.DB >= 1.0.0",
       "RealEstate.Model >= 1.0.0",
       "RealEstate.Service >= 1.0.0",
@@ -6009,6 +6025,9 @@
           "projectReferences": {
             "C:\\Users\\1998m\\source\\repos\\RealEstate\\RealEstate.DB\\RealEstate.DB.csproj": {
               "projectPath": "C:\\Users\\1998m\\source\\repos\\RealEstate\\RealEstate.DB\\RealEstate.DB.csproj"
+            },
+            "C:\\Users\\1998m\\source\\repos\\RealEstate\\ReaLEstate.Extension\\ReaLEstate.Extension.csproj": {
+              "projectPath": "C:\\Users\\1998m\\source\\repos\\RealEstate\\ReaLEstate.Extension\\ReaLEstate.Extension.csproj"
             },
             "C:\\Users\\1998m\\source\\repos\\RealEstate\\RealEstate.Model\\RealEstate.Model.csproj": {
               "projectPath": "C:\\Users\\1998m\\source\\repos\\RealEstate\\RealEstate.Model\\RealEstate.Model.csproj"

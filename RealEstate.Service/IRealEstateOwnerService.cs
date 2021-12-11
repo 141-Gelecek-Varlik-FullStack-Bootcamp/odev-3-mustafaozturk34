@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Service
 {
+    //interface created
     public interface IRealEstateOwnerService
     {
         public bool Login(string email, string password);

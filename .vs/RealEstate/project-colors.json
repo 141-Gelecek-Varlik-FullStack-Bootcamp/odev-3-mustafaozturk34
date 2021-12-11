@@ -20,7 +20,12 @@
       "ProjectGuid": "117b0f50-63a5-4ccc-939d-c88e4ed64fdd",
       "DisplayName": "RealEstate.Service",
       "ColorIndex": 3
+    },
+    "44ad73a1-2095-4179-a7ef-c3c39d00bf38": {
+      "ProjectGuid": "44ad73a1-2095-4179-a7ef-c3c39d00bf38",
+      "DisplayName": "ReaLEstate.Extension",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

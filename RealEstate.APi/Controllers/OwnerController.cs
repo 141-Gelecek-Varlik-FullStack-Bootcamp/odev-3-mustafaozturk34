@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate.APi.Infrastructer;
 using RealEstate.Model;
 using RealEstate.Service;
+using System.Collections.Generic;
 
 namespace RealEstate.APi.Controllers
 {
@@ -15,6 +17,7 @@ namespace RealEstate.APi.Controllers
         {
             realEstateOwnerService = _realEstateOwnerService;
         }
+
         [HttpPost]
         public General<RealEstateOwnerViewModel> Insert([FromBody] RealEstateOwnerViewModel newUser)
         {
@@ -22,6 +25,7 @@ namespace RealEstate.APi.Controllers
             return realEstateOwnerService.Insert(newUser);
         }
 
+        [LoginFilter]
         [HttpPost("login")]
         public bool Login(string email, string password)
         {
@@ -45,6 +49,7 @@ namespace RealEstate.APi.Controllers
         {
             return realEstateOwnerService.Delete(id);
         }
+
     }
 }
 

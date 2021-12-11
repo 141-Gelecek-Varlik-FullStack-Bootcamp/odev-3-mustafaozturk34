@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RealEstate.Model;
 using RealEstate.Service;
+using System.Collections.Generic;
 
 namespace RealEstate.APi.Controllers
 {
@@ -38,6 +39,11 @@ namespace RealEstate.APi.Controllers
         public General<RealEstateViewModel> Delete(int id)
         {
             return realEstateService.Delete(id);
+        }
+
+        public List<RealEstate.DB.Entities.RealEstate> GetEstate()
+        {
+            return realEstateService.GetEstate();
         }
     }
 }

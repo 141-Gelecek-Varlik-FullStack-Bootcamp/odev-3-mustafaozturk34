@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace Groot.Service.User
 {
 
+    
     public class RealEstateOwnerService : IRealEstateOwnerService
     {
         private readonly IMapper mapper;
@@ -20,6 +21,7 @@ namespace Groot.Service.User
             mapper = _mapper;
         }
 
+        //login method for real estate owner
         public bool Login(string email, string password)
         {
             bool result = false;
@@ -32,7 +34,7 @@ namespace Groot.Service.User
         }
 
 
-        //kullanıcı ekleme işlemi
+        //create method for real estate owner
         public General<RealEstateOwnerViewModel> Insert(RealEstateOwnerViewModel newUser)
         {
             var result = new General<RealEstateOwnerViewModel> ();
@@ -55,7 +57,9 @@ namespace Groot.Service.User
             return result;
         }
 
-        //kullanıcıların listelendiği metod
+
+
+        //all list method for real estate owner
         public General<RealEstateOwnerViewModel> GetUsers()
         {
             var result = new General<RealEstateOwnerViewModel>();
@@ -78,7 +82,7 @@ namespace Groot.Service.User
             return result;
         }
 
-        //kullanıcı güncelleme işlemi
+        //update method for real estate owner
         public General<RealEstateOwnerViewModel> Update(int id, RealEstateOwnerViewModel user)
         {
             var result = new General<RealEstateOwnerViewModel>();
@@ -108,7 +112,7 @@ namespace Groot.Service.User
             return result;
         }
 
-        //kullanıcı silme işlemi
+        //delete method for real estate owner
         public General<RealEstateOwnerViewModel> Delete(int id)
         {
             var result = new General<RealEstateOwnerViewModel>();
@@ -133,7 +137,7 @@ namespace Groot.Service.User
             return result;
         }
 
-
+        //remaining salary adjusted
         public void Remaning(RealEstateViewModel newReal)
         {
             var result = new RealEstateOwnerViewModel();

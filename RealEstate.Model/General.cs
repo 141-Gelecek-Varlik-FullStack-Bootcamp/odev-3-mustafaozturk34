@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Model
 {
-        public class General<T>
+
+    //method by which general properties are defined
+    public class General<T>
         {
             public T Entity { get; set; }
             public List<T> List { get; set; }

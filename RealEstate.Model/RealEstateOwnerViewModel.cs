@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Model
 {
+    // real estate owner view model layer
     public class RealEstateOwnerViewModel
     {
         public string Name { get; set; }
